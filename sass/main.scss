@@ -131,6 +131,12 @@ header#top {
 				}
 
 				a {
+					img {
+						-webkit-animation: scaleUp 1.5s infinite;
+						   -moz-animation: scaleUp 1.5s infinite;
+						     -o-animation: scaleUp 1.5s infinite;
+						        animation: scaleUp 1.5s infinite;
+					}
 					&:hover {
 						img {
 							@include transform(scale(1.1));
@@ -152,9 +158,31 @@ header#top {
 				p {
 					font-family: 'Myriad It', sans-serif;
 					font-size: 1.2rem;
+					
+					@include breakpoint($xlarge) {
+						margin-top: 6rem;
+					}
 				}
 			}
 		}
+	}
+}
+
+@keyframes scaleUp {
+	0% {
+		@include transform(scale(1));
+	}
+	50% {
+		@include transform(scale(1.2));
+	}
+	100% {
+		@include transform(scale(1));
+	}
+}
+
+.secondary {
+	a {
+		color: #FFF;
 	}
 }
 

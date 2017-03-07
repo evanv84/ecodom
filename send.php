@@ -18,7 +18,7 @@
 // If there are no errors, send the email
 
         mail ($to, $subject, $body, $from);
-        header('location: index.html');
+        header('location: /thank-you.html');
         exit();
 
     // }
